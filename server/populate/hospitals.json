@@ -1,0 +1,98 @@
+[
+    {
+        "name": "Pécsi Irgalmasrendi Kórház",
+        "city": "Pécs",
+        "country": "Hungary",
+        "users": [
+            "Summer"
+        ]
+    },
+    {
+        "name": "Miskolci Semmelweis Ignác Egészségügyi Központ és Egyetemi Oktatókórház",
+        "city": "Miskolc",
+        "country": "Hungary",
+        "users": [
+            "John",
+            "Linda"
+        ]
+    },
+    {
+        "name": "Szent Pantaleon Kórház Kht.",
+        "city": "Dunaújváros",
+        "country": "Hungary",
+        "users": [
+            "David",
+            "Olivia",
+            "Summer"
+        ]
+    },
+    {
+        "name": "Markhot Ferenc Oktatókórház és Rendelőintézet",
+        "city": "Eger",
+        "country": "Hungary",
+        "users": [
+            "Kate",
+            "George"
+        ]
+    },
+    {
+        "name": "Fővárosi Önkormányzat Heim Pál Gyermekkórház",
+        "city": "Budapest",
+        "country": "Hungary",
+        "users": [
+            "Kate",
+            "Olivia"
+        ]
+    },
+    {
+        "name": "The Helios Hospital Berlin-Buch",
+        "city": "Berlin",
+        "country": "Germany",
+        "users": [
+            "George",
+            "Jack",
+            "John"
+        ]
+    },
+    {
+        "name": "The University Hospital Duesseldorf",
+        "city": "Dusseldorf",
+        "country": "Germany",
+        "users": [
+            "Summer",
+            "Linda",
+            "Jack"
+        ]
+    },
+    {
+        "name": "The University Hospital of Ludwig Maximilian University of Munich",
+        "city": "Munich",
+        "country": "Germany",
+        "users": [
+            "Olivia",
+            "David",
+            "John"
+        ]
+    },
+    {
+        "name": "Rigas Austrumu Kliniskas Universitates",
+        "city": "Riga",
+        "country": "Latvia",
+        "users": [
+            "Kate",
+            "George",
+            "Linda"
+        ]
+    },
+    {
+        "name": "Karolinska University Hospital",
+        "city": "Stockholm",
+        "country": "Sweden",
+        "users": [
+            "David",
+            "Summer",
+            "Kate",
+            "Linda"
+        ]
+    }
+]
