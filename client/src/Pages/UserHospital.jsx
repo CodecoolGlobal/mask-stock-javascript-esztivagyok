@@ -2,51 +2,22 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { useLocation } from "react-router-dom";
 
-//Jó endpoint?
 const fetchHospitals = () => {
-  return fetch("/api/hospital").then((res) => res.json());
+  return fetch("/api/hospitals").then((res) => res.json());
 };
 
 const UserHospital = () => {
-  const [hospitals, setHospitals] = useState([
-    {
-      _id: "1",
-      name: "hospitalname",
-      city: "cityname",
-      country: "countryname",
-      users: ["egy", "ketto"],
-    },
-    {
-      _id: "2",
-      name: "hospitalname2",
-      city: "cityname2",
-      country: "countryname2",
-      users: ["egy", "ketto"],
-    },
-    {
-      _id: "3",
-      name: "hospitalname",
-      city: "cityname",
-      country: "countryname",
-      users: ["ketto"],
-    },
-  ]);
-
-  const [filteredHospitals, setFilteredHospitals] = useState([]);
+  const [hospitals, setHospitals] = useState([]);
 
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
   const user = searchParams.get("user");
 
   useEffect(() => {
-    /* fetchHospitals().then((hosps) => {
-      setHospitals(hosps);
-    }); */
-
-    setFilteredHospitals(
-      hospitals.filter((hospital) => hospital.users.includes(user))
-    );
-  }, []);
+    fetchHospitals().then((hosps) => {
+      setHospitals(hosps.filter((hosp) => hosp.users.includes(user)));
+    });
+  }, [user]);
 
   return (
     <div>
@@ -60,7 +31,7 @@ const UserHospital = () => {
           </tr>
         </thead>
         <tbody>
-          {filteredHospitals.map((hospital) => (
+          {hospitals.map((hospital) => (
             <tr key={hospital._id}>
               <td>{hospital.name}</td>
               <td>{hospital.city}</td>

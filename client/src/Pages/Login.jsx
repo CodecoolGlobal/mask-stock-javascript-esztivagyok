@@ -2,24 +2,22 @@ import React, { useState } from "react";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
+//get all users
 const fetchUsers = () => {
   return fetch("/api/users").then((res) => res.json());
 };
 
 const Login = () => {
-  const [users, setUsers] = useState([
-    { _id: "1", name: "egy" },
-    { _id: "2", name: "ketto" },
-  ]);
+  const [users, setUsers] = useState();
   const [loginValue, setLoginValue] = useState("");
 
   const navigate = useNavigate();
 
-  /* useEffect(() => {
+  useEffect(() => {
     fetchUsers().then((data) => {
       setUsers(data);
     });
-  }, []); */
+  }, []);
 
   const handleMockLogin = () => {
     const userNames = users.map((user) => user.name);

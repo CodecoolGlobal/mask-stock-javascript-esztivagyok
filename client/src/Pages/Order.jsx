@@ -1,8 +1,7 @@
 //Mit rendelünk pontosan?
 //felugró ablak sikeres küldés/sikertelen küldés
 
-import { useState } from "react";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
 //Jó endpoint?
@@ -12,7 +11,7 @@ const fetchAvailableMasksNumber = () => {
 
 //Jó endpoint?
 const fetchHospitals = () => {
-  return fetch("/api/hospital").then((res) => res.json());
+  return fetch("/api/hospitals").then((res) => res.json());
 };
 
 //Jó endpoint?
@@ -30,7 +29,7 @@ const Order = () => {
   const [amountOfMasks, setAmountOfMasks] = useState(10000);
   const [showConfirmationWindow, setShowConfirmationWindow] = useState(false);
   const [isOrderSuccess, setIsOrderSuccess] = useState();
-  const [orderdAmount, setOrderedAmount] = useState(2);
+  const [orderdAmount, setOrderedAmount] = useState("");
   const [options, setOptions] = useState([
     { label: "", value: "" },
     { label: "hospital1", value: "1" },
@@ -38,43 +37,61 @@ const Order = () => {
     { label: "hospital3", value: "3" },
   ]);
   const [optionValue, setOptionValue] = useState("");
+  const [errorMessage, setErrorMessage] = useState(false);
 
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
   const user = searchParams.get("user");
 
-  /* useEffect(() => {
+  useEffect(() => {
     fetchAvailableMasksNumber().then((masks) => {
-      setAmountOfMasks(masks);
+      setAmountOfMasks(masks[0].amount);
     });
 
     fetchHospitals().then((hospitals) => {
-      setOptions(
+      setOptions([
         { label: "", value: "" },
         ...hospitals.map((hospital) => ({
           label: hospital.name,
           value: hospital._id,
-        }))
-      );
+        })),
+      ]);
     });
-  }, []); */
+  }, []);
 
   const handleOrder = () => {
-    const order = {
-      user: user,
-      hospital: optionValue,
-      amount: orderdAmount,
-    };
+    if (orderdAmount > 0 && orderdAmount < amountOfMasks) {
+      setErrorMessage(false);
 
-    placeOrder(order).then((res) => {
-      setIsOrderSuccess(true);
-      setShowConfirmationWindow(true);
-    });
+      const order = {
+        user: user,
+        hospital: optionValue,
+        amount: orderdAmount,
+      };
+
+      placeOrder(order).then((res) => {
+        setIsOrderSuccess(true);
+        setShowConfirmationWindow(true);
+
+        fetchAvailableMasksNumber().then((masks) => {
+          setAmountOfMasks(masks[0].amount);
+        });
+
+        setOptionValue("");
+        setOrderedAmount("");
+      });
+    } else {
+      setErrorMessage(true);
+    }
   };
 
   return (
     <div>
       <h1>Order</h1>
+      <p>{`You can order maximum ${amountOfMasks}pcs masks`}</p>
+      {errorMessage && (
+        <p>{`You have to order at least 1 and maximum ${amountOfMasks} pcs`}</p>
+      )}
       <label htmlFor="masks">Amount of Masks: </label>
       <input
         id="masks"
@@ -98,8 +115,7 @@ const Order = () => {
       <button
         type="button"
         onClick={() => {
-          /* handleOrder(); */
-          setShowConfirmationWindow(true);
+          handleOrder();
         }}
       >
         Send Order

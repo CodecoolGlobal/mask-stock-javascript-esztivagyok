@@ -1,7 +1,8 @@
+import { useState } from "react";
 import { useLocation } from "react-router-dom";
 //Jó az endpoint?
 const postHospital = (hospital) => {
-  return fetch("/api/hospital", {
+  return fetch("/api/hospitals", {
     method: "POST",
     headers: {
       "Content-type": "application/json",
@@ -11,6 +12,8 @@ const postHospital = (hospital) => {
 };
 
 const AddHospital = () => {
+  const [errorMessage, setErrorMessage] = useState(false);
+  const [responseMessage, setResponseMessage] = useState(false);
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
   const user = searchParams.get("user");
@@ -25,20 +28,34 @@ const AddHospital = () => {
       return inputsObject;
     }, {});
 
-    console.log({
+    const hospital = {
       ...inputs,
       users: [user],
-    });
+    };
 
-    /* postHospital({
-      ...inputs,
-      users: [user],
-    }); */
+    if (
+      hospital.name !== "" &&
+      hospital.city !== "" &&
+      hospital.country !== ""
+    ) {
+      setErrorMessage(false);
+      postHospital(hospital).then(() => {
+        event.target.reset();
+        setResponseMessage(true);
+        setTimeout(() => {
+          setResponseMessage(false);
+        }, 3000);
+      });
+    } else {
+      setErrorMessage(true);
+    }
   };
 
   return (
     <div>
       <h1>Add new hospital</h1>
+      {errorMessage && <p>All inputfield must be filled out</p>}
+      {responseMessage && <p>Your order was successful</p>}
       <form onSubmit={handleSubmit}>
         <label htmlFor="name">Hospital name: </label>
         <input id="name" name="name" />
