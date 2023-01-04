@@ -1,32 +1,52 @@
 [
     {
-        "name": "Pécsi Irgalmasrendi Kórház, Pécs (Hungary)"
+        "name": "Pécsi Irgalmasrendi Kórház",
+        "city": "Pécs",
+        "country": "Hungary"
     },
     {
-        "name": "Miskolci Semmelweis Ignác Egészségügyi Központ és Egyetemi Oktatókórház, Miskolc (Hungary)"
+        "name": "Miskolci Semmelweis Ignác Egészségügyi Központ és Egyetemi Oktatókórház",
+        "city": "Miskolc",
+        "country": "Hungary"
     },
     {
-        "name": "Szent Pantaleon Kórház Kht., Dunaújváros (Hungary)"
+        "name": "Szent Pantaleon Kórház Kht.",
+        "city": "Dunaújváros",
+        "country": "Hungary"
     },
     {
-        "name": "Markhot Ferenc Oktatókórház és Rendelőintézet, Eger (Hungary)"
+        "name": "Markhot Ferenc Oktatókórház és Rendelőintézet",
+        "city": "Eger",
+        "country": "Hungary"
     },
     {
-        "name": "Fővárosi Önkormányzat Heim Pál Gyermekkórház, Budapest (Hungary)"
+        "name": "Fővárosi Önkormányzat Heim Pál Gyermekkórház",
+        "city": "Budapest",
+        "country": "Hungary"
     },
     {
-        "name": "The Helios Hospital Berlin-Buch, Berlin (Germany)"
+        "name": "The Helios Hospital Berlin-Buch",
+        "city": "Berlin",
+        "country": "Germany"
     },
     {
-        "name": "The University Hospital Duesseldorf, Duesseldorf (Germany)"
+        "name": "The University Hospital Duesseldorf",
+        "city": "Dusseldorf",
+        "country": "Germany"
     },
     {
-        "name": "The University Hospital of Ludwig Maximilian University of Munich , Munich (Germany)"
+        "name": "The University Hospital of Ludwig Maximilian University of Munich",
+        "city": "Munich",
+        "country": "Germany"
     },
     {
-        "name": "Rigas Austrumu Kliniskas Universitates, Riga (Latvia)"
+        "name": "Rigas Austrumu Kliniskas Universitates",
+        "city": "Riga",
+        "country": "Latvia"
     },
     {
-        "name": "Karolinska University Hospital, Stockholm (Swened)"
+        "name": "Karolinska University Hospital",
+        "city": "Stockholm",
+        "country": "Sweden"
     }
 ]
