@@ -17,6 +17,7 @@ const Nav = () => {
         <Link to={`/order/${location.search}`}>Order</Link>
         <Link to={`/addHospital/${location.search}`}>Add new hospital</Link>
         <Link to={`/myHospitals/${location.search}`}>My hospitals</Link>
+        <Link to={`/orderlist/${location.search}`}>All orders</Link>
       </nav>
       <Outlet />
     </div>

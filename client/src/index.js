@@ -9,6 +9,7 @@ import Nav from "./Pages/Nav";
 import Order from "./Pages/Order";
 import AddHospital from "./Pages/AddHospital";
 import UserHospital from "./Pages/UserHospital";
+import Orderlist from "./Pages/Orderlist";
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,7 @@ const router = createBrowserRouter([
       },
       { path: "/addHospital", element: <AddHospital /> },
       { path: "/myHospitals", element: <UserHospital /> },
+      { path: "/orderlist", element: <Orderlist /> },
     ],
   },
 ]);
