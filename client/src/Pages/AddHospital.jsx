@@ -52,7 +52,7 @@ const AddHospital = () => {
   };
 
   return (
-    <div>
+    <div  className="addHospital">
       <h1>Add new hospital</h1>
       {errorMessage && <p>All inputfield must be filled out</p>}
       {responseMessage && <p>Your order was successful</p>}
@@ -66,7 +66,7 @@ const AddHospital = () => {
         <label htmlFor="country">Country: </label>
         <input id="country" name="country" />
         <br />
-        <button type="submit">Add new hospital</button>
+        <button className="btn" type="submit">Add new hospital</button>
       </form>
     </div>
   );

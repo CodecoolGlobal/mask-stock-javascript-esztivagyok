@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import mask from "../mask.png";
 
 //get all users
 const fetchUsers = () => {
@@ -27,16 +28,22 @@ const Login = () => {
   };
 
   return (
-    <div>
-      <label htmlFor="userName">User name: </label>
-      <input
+    <>
+    <div className="welcomeBox">
+      <p className="welcomeText">Welcome Visitor, please use your login to access our system.</p>
+    </div>
+    <div className="userBox">
+      <label htmlFor="userName">Username: </label>
+      <input className="userInput"
         name="userName"
         id="userName"
         value={loginValue}
         onChange={(event) => setLoginValue(event.target.value)}
       />
-      <button onClick={handleMockLogin}>Login</button>
-    </div>
+      <button className="btn" onClick={handleMockLogin}>Login</button>
+      </div>
+     <img className="mask" alt="mask" src={mask}/>
+     </>
   );
 };
 

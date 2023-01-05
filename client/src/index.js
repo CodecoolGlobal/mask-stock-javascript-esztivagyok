@@ -23,8 +23,8 @@ const router = createBrowserRouter([
         path: "/order",
         element: <Order />,
       },
-      { path: "/addHospital", element: <AddHospital /> },
-      { path: "/myHospitals", element: <UserHospital /> },
+      { path: "/addHospital", element: <AddHospital/> },
+      { path: "/myHospitals", element: <UserHospital/> },
     ],
   },
 ]);

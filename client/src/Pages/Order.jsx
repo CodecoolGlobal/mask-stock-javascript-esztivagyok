@@ -86,9 +86,9 @@ const Order = () => {
   };
 
   return (
-    <div>
+    <div className="orderTable">
       <h1>Order</h1>
-      <p>{`You can order maximum ${amountOfMasks}pcs masks`}</p>
+      <p>{`You can order maximum ${amountOfMasks} pcs of masks`}</p>
       {errorMessage && (
         <p>{`You have to order at least 1 and maximum ${amountOfMasks} pcs`}</p>
       )}
@@ -112,7 +112,7 @@ const Order = () => {
           </option>
         ))}
       </select>
-      <button
+      <button className="btn"
         type="button"
         onClick={() => {
           handleOrder();
@@ -134,11 +134,11 @@ const ConfirmationModal = ({ isSuccess, closeModal }) => {
   return (
     <div className="backdrop">
       <div className="modal">
-        <h1>
+        <h3>
           {isSuccess
             ? "Your order was successfully sent"
             : "Unfortunatelly something went wrong, please try again later"}
-        </h1>
+        </h3>
         <button onClick={closeModal}>OK</button>
       </div>
     </div>

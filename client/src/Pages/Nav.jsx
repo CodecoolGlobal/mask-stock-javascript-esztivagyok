@@ -12,14 +12,18 @@ const Nav = () => {
   }
 
   return (
-    <div>
+    <>
+    <div className="welcomeBox">
       <nav>
-        <Link to={`/order/${location.search}`}>Order</Link>
-        <Link to={`/addHospital/${location.search}`}>Add new hospital</Link>
-        <Link to={`/myHospitals/${location.search}`}>My hospitals</Link>
+        <Link to={`/order/${location.search}`} className="link">Order</Link>
+        <Link to={`/addHospital/${location.search}`}className="link">Add new hospital</Link>
+        <Link to={`/myHospitals/${location.search}`}className="link">My hospitals</Link>
       </nav>
-      <Outlet />
     </div>
+    <div>
+    <Outlet />
+    </div>
+    </>
   );
 };
 

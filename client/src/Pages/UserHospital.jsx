@@ -20,14 +20,14 @@ const UserHospital = () => {
   }, [user]);
 
   return (
-    <div>
+    <div className="myHospital">
       <h1>My Hospitals</h1>
       <table>
         <thead>
           <tr>
-            <th>Name</th>
-            <th>City</th>
-            <th>Country</th>
+            <th className="thName">Name</th>
+            <th className="thCity">City</th>
+            <th className="thCity">Country</th>
           </tr>
         </thead>
         <tbody>

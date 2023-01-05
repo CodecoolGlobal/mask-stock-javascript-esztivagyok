@@ -1,15 +1,103 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-color:#bfe9cb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+/*Login page*/
+
+.welcomeBox{
+  background-color: #fbfab8;
+  height: 160px;
+  border-radius: 5px;
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.welcomeText{
+  color: #3d8d5c;
+  font-size: 40px;
+}
+.userBox{
+  background-color: #59a676;
+  width: fit-content;
+  padding: 10px;
+  font-size: 30px;
+  border-radius: 5px;
+  color: #fbfab8;
+  margin-left: 550px;
+  margin-top: 10px;
+}
+button{
+  border-radius: 3px;
+  border: none;
+  margin: 10px 10px;
+  padding: 10px 10px;
+  font-size: 20px;
+  background-color: #fbfab8;
+  color: #3d8d5c;
+  font-weight: bold;
+}
+input{
+  height: 40px;
+  font-size: large;
+  background-color: #fbfab8;
+  border-radius: 3px;
+  color: #217b44;
+  text-align: right;
+
+}
+select{
+  height: 40px;
+  font-size: large;
+  background-color: #fbfab8;
+  border-radius: 3px;
+  color: #217b44;
+}
+label{
+  display: inline-block;
+  width: 400px;
+  margin-left:20px;
+}
+th{
+  border: solid #fbfab8;
+  text-align: left;
+}
+.thName{
+  width: 600px;
+}
+.thCity{
+  width: 200px;
+}
+.mask{
+  height: 500px;
+  margin-top: 50px;
+}
+
+/*Navigation Page*/
+
+.link{
+  background-color: #59a676;
+  text-decoration: none;
+  width: fit-content;
+  padding: 10px;
+  font-size: 30px;
+  border-radius: 5px;
+  color: #fbfab8;
+  margin-top: 10px;
+  margin-right:50px ;
+  margin-left: 50px;
+}
+.orderTable{
+  background-color: #59a676;
+  width: fit-content;
+  padding: 10px;
+  font-size: 30px;
+  border-radius: 5px;
+  color: #fbfab8;
+  margin-top: 10px;
 }
 
 .backdrop {
@@ -22,9 +110,29 @@ code {
 }
 
 .modal {
-  background-color: white;
+  background-color:  #59a676;
   position: absolute;
-  top: 20%;
-  left: 20%;
+  top: 60%;
+  left: 40%;
   max-width: 40%;
+  font-size: 30px;
+}
+
+.addHospital{
+  background-color: #59a676;
+  min-width: 500px;
+  padding: 10px;
+  font-size: 30px;
+  border-radius: 5px;
+  color: #fbfab8;
+  margin-top: 10px;
+}
+.myHospital{
+  background-color: #59a676;
+  min-width: 800px;
+  padding: 10px;
+  font-size: 30px;
+  border-radius: 5px;
+  color: #fbfab8;
+  margin-top: 10px;
 }

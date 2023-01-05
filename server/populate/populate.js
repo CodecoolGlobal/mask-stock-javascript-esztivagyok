@@ -1,9 +1,9 @@
 const mongoose = require("mongoose");
 const hospitals = require("./hospitals.json");
-const HospitalModel = require("../db /hospital.model");
-const UserModel = require("../db /user.model");
+const HospitalModel = require("../db/hospital.model");
+const UserModel = require("../db/user.model");
 const users = require("./users.json");
-const StockModel = require("../db /stock.model");
+const StockModel = require("../db/stock.model");
 const stock = require("./stock.json");
 
 const populate = async () => {
