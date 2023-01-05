@@ -30,12 +30,7 @@ const Order = () => {
   const [showConfirmationWindow, setShowConfirmationWindow] = useState(false);
   const [isOrderSuccess, setIsOrderSuccess] = useState();
   const [orderdAmount, setOrderedAmount] = useState("");
-  const [options, setOptions] = useState([
-    { label: "", value: "" },
-    { label: "hospital1", value: "1" },
-    { label: "hospital2", value: "2" },
-    { label: "hospital3", value: "3" },
-  ]);
+  const [options, setOptions] = useState([]);
   const [optionValue, setOptionValue] = useState("");
   const [errorMessage, setErrorMessage] = useState(false);
 
@@ -64,7 +59,7 @@ const Order = () => {
       setErrorMessage(false);
 
       const order = {
-        user: user,
+        name: user,
         hospital: optionValue,
         amount: orderdAmount,
       };
