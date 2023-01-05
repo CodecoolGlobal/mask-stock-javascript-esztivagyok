@@ -33,7 +33,7 @@ const Login = () => {
       <p className="welcomeText">Welcome Visitor, please use your login to access our system.</p>
     </div>
     <div className="userBox">
-      <label htmlFor="userName">Username: </label>
+      <label className="usernameLabel" htmlFor="userName">Username: </label>
       <input className="userInput"
         name="userName"
         id="userName"

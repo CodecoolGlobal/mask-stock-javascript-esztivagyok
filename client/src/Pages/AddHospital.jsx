@@ -55,7 +55,7 @@ const AddHospital = () => {
     <div  className="addHospital">
       <h1>Add new hospital</h1>
       {errorMessage && <p>All inputfield must be filled out</p>}
-      {responseMessage && <p>Your order was successful</p>}
+      {responseMessage && <p>Hospital added</p>}
       <form onSubmit={handleSubmit}>
         <label htmlFor="name">Hospital name: </label>
         <input id="name" name="name" />

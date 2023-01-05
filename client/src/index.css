@@ -27,8 +27,11 @@ body {
   font-size: 30px;
   border-radius: 5px;
   color: #fbfab8;
-  margin-left: 550px;
+  margin-left: 500px;
   margin-top: 10px;
+}
+.usernameLabel{
+  width: 140px;
 }
 button{
   border-radius: 3px;
